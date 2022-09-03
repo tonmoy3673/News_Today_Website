@@ -25,7 +25,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container mt-3">
-          <a class="navbar-brand" href="#"><h3><span class="text-primary" id="logo">📰 News</span> Today</h3></a>
+          <a class="navbar-brand" href="#"><h3><span class="text-primary"  id="logo">📰 News</span> Today</h3></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -46,13 +46,78 @@
         </div>
       </nav>
 
-      <!-- ===========Line Bar======== -->
-    <div class="container-fluid px-5 ">
-        <hr>
-    </div>
-
-      <!-- =============Blog Section========= -->
      
+
+    <!-- =============Header End=============== -->
+      
+      <!-- =============Blog Section========= -->
+
+      <section class="py-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h5>Difference Between var,let and const ?</h5>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong class="text-primary" >Var :</strong><br>
+               1. The var is the oldest keyword to declare a variable in JavaScrip. The scope of the var keyword is the global.<br>
+                2. In the var tab, when you will run the code, you will see an error as a is not defined because var variables are only accessible in the function scope.<br>
+                
+                
+
+                <strong class="text-primary" >Let:</strong><br>
+                 1.The let keyword is an improved version of the var keyword.The scope of a let variable is only block scoped.<br>
+                2. In the let tab, when you run the code, you will see an error as i is not defined because let variables are only accessible within the block they are declared.<br>
+              
+                <strong class="text-primary">Const :</strong><br>
+                1. The const keyword has all the properties that are the same as the let keyword, except the user cannot update it.<br>
+                
+               
+                
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h5>Difference Between Arrow Function and Regular Function</h5>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong class="text-primary">Regular Functions :</strong>
+                <p>1. The regular functions are the usual way to define methods on classes.<br>
+                2.  As seen in the previous section, the regular function can easily construct objects.</p>
+
+               <strong class="text-primary">Arrow Functions :</strong>
+               <p>1. The behavior of this inside of an arrow function differs considerably from the regular
+                function's this behavior. The arrow function doesn't define its own execution context.<br>
+                2. You can return values from the arrow function the same way as from a regular function,
+                  but with one useful exception.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               <h5> What is the difference between Map,forEach and find ?</h5>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                
+                <p>The main difference between map and forEach is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn't return anything.<br>
+                  <b>. map()</b> goes through all entries then creates a new array using the function supplied. <br>
+                  <b>. find()</b> locates a specific entry by a predicate and returns it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 

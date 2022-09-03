@@ -28,7 +28,7 @@ const setCategory = async () => {
 
             const li = document.createElement('li');
             li.innerHTML = `
-            <a onclick="loadAllNews('${category.category_id}')" class="nav-link btn btn-primary text-white">${category.category_name}</a>
+            <a onclick="loadAllNews('${category.category_id}','${category.category_name}')" class="nav-link btn btn-primary text-white">${category.category_name}</a>
             `;
             allCategory.appendChild(li);
         }
@@ -48,7 +48,7 @@ const toggleSpinner = isLoading => {
     }
 }
 
-const loadAllNews = async category_id => {
+const loadAllNews = async (category_id,category_name) => {
 
     // spinner start
     toggleSpinner(true);
@@ -70,7 +70,7 @@ const displayNewsItem = newsAll => {
 
     const newsCount = document.getElementById('news-count').innerHTML = `${newsAll.length} items found for category`;
 
-    
+
     // =============No News==============//
     const noNews = document.getElementById('no-news-category');
     if (newsAll.length === 0) {
