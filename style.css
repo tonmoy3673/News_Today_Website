@@ -9,6 +9,7 @@ body{
    
    
 }
+
 #subscribe:hover{
     background-color: #ff4d4d !important;
     
@@ -21,4 +22,7 @@ h3{
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
     font-size: 35px;
+}
+#footer{
+    
 }
