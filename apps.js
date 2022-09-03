@@ -13,14 +13,14 @@ const loadNews = async () => {
 }
 
 const setCategory = async () => {
-    const data = await loadNews()
+    const data = await loadNews();
 
     const allCategory = document.getElementById('menu-bar');
 
     const uniqueArray = [];
 
     for (const category of data) {
-        
+        const { category_name, category_id } = category;
 
         if (uniqueArray.indexOf(category.category_name) === -1) {
             uniqueArray.push(category.category_name);
@@ -28,7 +28,7 @@ const setCategory = async () => {
 
             const li = document.createElement('li');
             li.innerHTML = `
-            <a onclick="loadAllNews('${category.category_id}')" class="nav-link btn btn-primary text-white ms-3 mt-2">${category.category_name}</a>
+            <a onclick="loadAllNews('${category.category_id}','${category.category_name}')" class="nav-link btn btn-primary text-white ms-3 mt-2">${category.category_name}</a>
             `;
             allCategory.appendChild(li);
         }
@@ -48,7 +48,7 @@ const toggleSpinner = isLoading => {
     }
 }
 
-const loadAllNews = async (category_id) => {
+const loadAllNews = async (category_id,categoryName) => {
 
     // ===========Spinner Start======//
     toggleSpinner(true);
@@ -57,7 +57,9 @@ const loadAllNews = async (category_id) => {
 
     const res = await fetch(url);
     const data = await res.json();
-    displayNewsItem(data.data);
+    const newsData=(data.data)
+    displayNewsItem(newsData,categoryName);
+    return newsData;
 }
 
 const displayNewsItem = newsAll => {
