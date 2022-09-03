@@ -28,7 +28,7 @@ const setCategory = async () => {
 
             const li = document.createElement('li');
             li.innerHTML = `
-            <a onclick="loadAllNews('${category.category_id}')" class="nav-link btn btn-primary text-white ms-3">${category.category_name}</a>
+            <a onclick="loadAllNews('${category.category_id}')" class="nav-link btn btn-primary text-white ms-3 mt-2">${category.category_name}</a>
             `;
             allCategory.appendChild(li);
         }
